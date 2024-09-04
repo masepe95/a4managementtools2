@@ -1,0 +1,765 @@
+/* Copyright Marco Cerulli Consulting © */
+/* Written by Neil Otupacca.            */
+
+/* Import Helvetica Neue fonts and Theme Icons. */
+@import url("helvetica-neue.css");
+
+@tailwind base;  /* Preflight will be injected here. */
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    /* Basic colors (default theme). */
+    :root {
+        --a4-bkg-color: #334e70;
+        --a4-shade-100: #225e8e;
+        --a4-shade-200: #8497b0;
+        --a4-shade-300: #4f81bd;
+        --a4-shade-400: #95b3d7;
+        --a4-shade-500: #7abffd;
+        --a4-shade-600: #b6e5fe;
+        --a4-shade-700: #d6dce6;
+        --a4-shade-800: #dce6f1;
+        --a4-shade-900: #ffffff;
+        --a4-dark-red : #c0504d;
+        --a4-light-red: #f2dcdb;
+        --a4-font-family: 'HelveticaNeue';
+    }
+
+    .a4-fontFamily {
+        font-family: var(--a4-font-family);
+    }
+
+
+    /* Style resets per 'preflight.css' */
+
+    ol,
+    ul {
+        list-style: revert;  /* Rimuovi la rule definita in "preflight.css" (@tailwind base). */
+    }
+
+
+    /* Style resets per 'node_modules\@tailwindcss\forms\dist\tailwind.css' */
+
+    [type='text']:focus,
+    input:where(:not([type])):focus,
+    [type='email']:focus,
+    [type='url']:focus,
+    [type='password']:focus,
+    [type='number']:focus,
+    [type='date']:focus,
+    [type='datetime-local']:focus,
+    [type='month']:focus,
+    [type='search']:focus,
+    [type='tel']:focus,
+    [type='time']:focus,
+    [type='week']:focus,
+    [multiple]:focus,
+    textarea:focus,
+    select:focus {
+        box-shadow: revert;  /* Rimuovi le rules definite in "tailwind.css" (@tailwindcss\forms). */
+    }
+}
+
+@layer components {
+    .a4-bg-color {
+        background-color: var(--a4-bkg-color);
+    }
+
+    .a4-text-shade-100 {
+        color: var(--a4-shade-100);
+    }
+
+    .a4-bg-shade-100 {
+        background-color: var(--a4-shade-100);
+    }
+
+    .a4-bord-shade-100 {
+        border-color: var(--a4-shade-100);
+    }
+
+    .a4-fill-shade-100 {
+        fill: var(--a4-shade-100);
+    }
+
+    .a4-text-shade-200 {
+        color: var(--a4-shade-200);
+    }
+
+    .a4-bg-shade-200 {
+        background-color: var(--a4-shade-200);
+    }
+
+    .a4-bord-shade-200 {
+        border-color: var(--a4-shade-200);
+    }
+
+    .a4-fill-shade-200 {
+        fill: var(--a4-shade-200);
+    }
+
+    .a4-text-shade-300 {
+        color: var(--a4-shade-300);
+    }
+
+    .a4-bg-shade-300 {
+        background-color: var(--a4-shade-300);
+    }
+
+    .a4-bord-shade-300 {
+        border-color: var(--a4-shade-300);
+    }
+
+    .a4-bb-shade-300 {
+        border-bottom-color: var(--a4-shade-300);
+    }
+
+    .a4-fill-shade-300 {
+        fill: var(--a4-shade-300);
+    }
+
+    .a4-stroke-shade-300 {
+        stroke: var(--a4-shade-300);
+    }
+
+    .a4-fill-shade-300 {
+        fill: var(--a4-shade-300);
+    }
+
+    .hover\:a4-stroke-shade-300:hover {
+        stroke: var(--a4-shade-300);
+    }
+
+    .a4-text-shade-400 {
+        color: var(--a4-shade-400);
+    }
+
+    .a4-bg-shade-400 {
+        background-color: var(--a4-shade-400);
+    }
+
+    .a4-bord-shade-400 {
+        border-color: var(--a4-shade-400);
+    }
+
+    .a4-fill-shade-400 {
+        fill: var(--a4-shade-400);
+    }
+
+    .a4-text-shade-500 {
+        color: var(--a4-shade-500);
+    }
+
+    .a4-bg-shade-500 {
+        background-color: var(--a4-shade-500);
+    }
+
+    .a4-bord-shade-500 {
+        border-color: var(--a4-shade-500);
+    }
+
+    .a4-fill-shade-500 {
+        fill: var(--a4-shade-500);
+    }
+
+    .a4-text-shade-600 {
+        color: var(--a4-shade-600);
+    }
+
+    .a4-bg-shade-600 {
+        background-color: var(--a4-shade-600);
+    }
+
+    .a4-bord-shade-600 {
+        border-color: var(--a4-shade-600);
+    }
+
+    .a4-fill-shade-600 {
+        fill: var(--a4-shade-600);
+    }
+
+    .a4-text-shade-700 {
+        color: var(--a4-shade-700);
+    }
+
+    .a4-bg-shade-700 {
+        background-color: var(--a4-shade-700);
+    }
+
+    .a4-bord-shade-700 {
+        border-color: var(--a4-shade-700);
+    }
+
+    .a4-fill-shade-700 {
+        fill: var(--a4-shade-700);
+    }
+
+    .a4-text-shade-800 {
+        color: var(--a4-shade-800);
+    }
+
+    .a4-bg-shade-800 {
+        background-color: var(--a4-shade-800);
+    }
+
+    .a4-bord-shade-800 {
+        border-color: var(--a4-shade-800);
+    }
+
+    .a4-fill-shade-800 {
+        fill: var(--a4-shade-800);
+    }
+
+    .a4-text-shade-900 {
+        color: var(--a4-shade-900);
+    }
+
+    .a4-bg-shade-900 {
+        background-color: var(--a4-shade-900);
+    }
+
+    .a4-bord-shade-900 {
+        border-color: var(--a4-shade-900);
+    }
+
+    .a4-fill-shade-900 {
+        fill: var(--a4-shade-900);
+    }
+
+    .a4-text-dark-red {
+        color: var(--a4-dark-red);
+    }
+
+    .a4-bg-dark-red {
+        background-color: var(--a4-dark-red);
+    }
+
+    .a4-bord-dark-red {
+        border-color: var(--a4-dark-red);
+    }
+
+    .a4-fill-dark-red {
+        fill: var(--a4-dark-red);
+    }
+
+    .a4-text-light-red {
+        color: var(--a4-light-red);
+    }
+
+    .a4-bg-light-red {
+        background-color: var(--a4-light-red);
+    }
+
+    .a4-bord-light-red {
+        border-color: var(--a4-light-red);
+    }
+
+    .a4-fill-light-red {
+        fill: var(--a4-light-red);
+    }
+
+    .hover\:a4-text-shade-900:hover {
+        color: var(--a4-shade-900);
+    }
+
+    /* Caps. */
+    .caps-normal {
+        font-variant-caps: normal;
+    }
+
+    .caps-small {
+        font-variant-caps: small-caps;
+    }
+
+    .caps-all-small {
+        font-variant-caps: all-small-caps;
+    }
+
+    .caps-petite {
+        font-variant-caps: petite-caps;
+    }
+
+    .caps-unicase {
+        font-variant-caps: unicase;
+    }
+
+    .caps-titling {
+        font-variant-caps: titling-caps;
+    }
+}
+
+
+/* Tool windows. */
+@layer components {
+    .tool-opener {
+        @apply bg-gray-200 px-0.5 fixed top-0 bottom-0 z-10;
+    }
+
+    .tool-opener-arrow {
+        @apply relative text-[80%] text-gray-500 hover:a4-text-dark-red top-1/2 translate-y-[-50%] cursor-pointer;
+    }
+}
+
+
+/* Icona per la visibilità della password. */
+@layer components {
+    /* Sovrapposizione tramite grid. */
+    .pw-container {
+        display: inline-grid;
+        grid-template-columns: 1fr 2.5rem;  /* Larghezza seconda colonna = padding-right dell'input. */
+    }
+
+    /* L'input si trova nella prima colonna e si estende anche nella seconda. */
+    .pw-container input.peer[type=text],
+    .pw-container input.peer[type=password] {
+        padding-right: 2.5rem;  /* Padding per riservare lo spazio dell'icona visible/hidden. */
+        grid-row: 1;
+        grid-column: 1 / span 2;  /* Colonna 1 + 2 (la seconda colonna si sovrappone con lo span che contiene gli svg). */
+    }
+
+    .pw-container input.peer[type=password]:disabled {
+        background-color: #f5f5f5;
+    }
+
+    /* Container dell'icona show/hide. */
+    .pw-container input.peer[type=text] + span.pw-view,
+    .pw-container input.peer[type=password] + span.pw-view {
+        display: grid;  /* Grid per permettere l'attributo "place-self: center" nei child svg. */
+        grid-template-columns: 1fr;
+        grid-row: 1;
+        grid-column: 2 / span 1;  /* Colonna 2. */
+        padding-right: .3rem;    /* L'icona svg è centrata orizzontalmente, il padding-right è escluso dall'area di content. */
+    }
+
+    /* Icone svg show/hide. */
+    .pw-container input.peer[type=text] + span.pw-view svg,
+    .pw-container input.peer[type=password] + span.pw-view svg {
+        fill: #808080;
+        place-self: center;  /* Centra orizzontalmente e verticalmente l'icona show/hide nello span contenitore. */
+        cursor: pointer;
+    }
+
+    .pw-container input.peer[type=text] + span.pw-view svg {
+        width: 1.1rem;   /* Dimensione dell'icona show/hide, proporzionale alla grandezza della font. */
+        height: 1.1rem;  /* Dimensione dell'icona show/hide, proporzionale alla grandezza della font. */
+
+    }
+
+    .pw-container input.peer[type=password] + span.pw-view svg {
+        width: 1rem;   /* Dimensione dell'icona show/hide, proporzionale alla grandezza della font. */
+        height: 1rem;  /* Dimensione dell'icona show/hide, proporzionale alla grandezza della font. */
+    }
+
+    /* Icone svg show/hide in stato hover (non disabilitata). */
+    .pw-container input[type=text]:not(:disabled) + span.pw-view svg:hover,
+    .pw-container input[type=password]:not(:disabled) + span.pw-view svg:hover {
+        fill: #404040;
+    }
+
+    /* Icone svg show/hide in stato disabled. */
+    .pw-container input[type=text].pw-show-icon:disabled + span svg,
+    .pw-container input[type=password].pw-show-icon:disabled + span svg {
+        fill: #e0e0e0;
+        cursor: default;
+    }
+}
+
+/* Label e bordi per gli elementi <select>, <input> e <input[type=email]. */
+@layer components {
+    /* Imposta lo stile 'text-overflow: ellipsis' a tutti gli <span> associati alle <option>
+       dei <select>. */
+    [data-te-select-options-list-ref] [data-te-select-option-text-ref],
+    [data-te-select-options-list-ref] [data-te-select-option-text-ref] span {
+        @apply overflow-x-hidden text-ellipsis;
+    }
+
+    label[data-te-select-option-group-label-ref] {
+        @apply text-white a4-bg-shade-100 border-gray-200 border-solid border-y;
+    }
+    div[data-te-select-option-group-ref]:first-of-type label[data-te-select-option-group-label-ref] {
+        @apply border-t-0;
+    }
+
+    /* Colore della <label> dell'<input> quando quest'ultimo è blank (un contenuto costituito
+       solo da white-char è considerato blank).
+       Nota: la classe 'no-content' indica che l'input è blank.
+       Nota: il colore 'text-neutral-400' è applicato alla label sia agli input regolari che
+             a quelli generati e associati da tailwind ad ogni <select[data-te-select-init]>,
+             sia 'multiple' oppure no.
+             Il colore 'text-neutral-400' si applica solo alle label il cui input non ha il
+             focus, è blank e non è required. */
+    .peer.no-content:not(:required):not(:focus) ~ label {
+        @apply text-neutral-400;
+    }
+
+    /* Colore della <label> dell'<input> quando quest'ultimo è blank & required e non ha il focus. */
+    .peer.no-content:not(:focus):required ~ label {
+        @apply text-red-300;
+    }
+
+    /* Colore della <label> dell'<input> quando quest'ultimo è blank & required ed ha il focus.
+       Lo stesso colore viene applicato se l'input è invalid (sia col focus che senza).
+       ha il focus.
+       Nota: il colore del testo in caso di contenuto invalid (ad esempio [type=email]) è specificato
+             direttamente nell'input con la classe 'invalid:a4-text-dark-red'. */
+    .peer.no-content:focus:required ~ label,
+    .peer:invalid ~ label:not(.no-chars) {
+        @apply a4-text-dark-red;
+    }
+
+
+    /* Bordi in caso di invalidità dei campi <input> (sia 'text' che associati ad un <select>).*/
+
+    /* I bordi segnalano un errore (red-600) nel caso di un input blank & required oppure invalid,
+       il colore del bordo è applicato sia che l'input abbia il focus oppure no.
+       Nota: la classe 'no-content' indica che l'input è blank. */
+    .peer.no-content:required ~ .group[data-te-input-notch-ref] > div,  /* input blank & required. */
+    .peer:invalid ~ .group[data-te-input-notch-ref] > div {             /* input invalid (type=email). */
+        @apply a4-bord-dark-red;  /* border-red-600 (220 38 38). */
+    }
+
+    /* Se l'input ha il focus, applica la shadow che simula il bordo con spessore maggiorato.
+       Nota: parte 'leading' (a sinistra della label). */
+    .peer.no-content:required:focus ~ .group[data-te-input-notch-ref] > div[data-te-input-notch-leading-ref],
+    .peer:invalid:focus ~ .group[data-te-input-notch-ref] > div[data-te-input-notch-leading-ref] {
+        --tw-shadow: -1px 0 0 #dc2626, 0 1px 0 0 #dc2626, 0 -1px 0 0 #dc2626;  /* red-600. */
+    }
+
+    /* Oltre alla situazione in cui l'input ha il focus (prima e terza rule), la shadow ('middle') e
+       il 'border-top-color' trasparente sono applicati anche quando l'input non ha il focus ma
+       l'attributo [data-te-input-state-active] indica un contenuto invalido (seconda e quarta rule).
+       Nota: la classe 'no-content' viene inclusa anche quando l'input contiene solo white-char, in
+             quel caso però, [data-te-input-state-active] indica che il campo non è empty. */
+    .peer.no-content:required:focus ~ .group[data-te-input-notch-ref] > div[data-te-input-notch-middle-ref],
+    .peer.no-content:required ~ .group[data-te-input-notch-ref][data-te-input-state-active] > div[data-te-input-notch-middle-ref],
+    .peer:invalid:focus ~ .group[data-te-input-notch-ref] > div[data-te-input-notch-middle-ref],
+    .peer:invalid ~ .group[data-te-input-notch-ref][data-te-input-state-active] > div[data-te-input-notch-middle-ref] {
+        --tw-shadow: 0 1px 0 0 #dc2626;  /* red-600. */
+        border-top-color: transparent;
+    }
+
+    /* Se l'input ha il focus, applica la shadow che simula un bordo con spessore maggiorato.
+       Nota: parte 'trailing' (a destra della label). */
+    .peer.no-content:required:focus ~ .group[data-te-input-notch-ref] > div[data-te-input-notch-trailing-ref],
+    .peer:invalid:focus ~ .group[data-te-input-notch-ref] > div[data-te-input-notch-trailing-ref] {
+        --tw-shadow: 1px 0 0 #dc2626, 0 -1px 0 0 #dc2626, 0 1px 0 0 #dc2626;  /* red-600. */
+    }
+}
+
+/* Classi per i colori delle associazioni customer-tools (Customer block). */
+@layer components {
+    /* yes     : blue.
+       no      : black oppure red se esistono dei job per quel tool.
+       disabled: gray.
+
+       Nota: i tool correntemente associati (anche se disabilitati) sono generati
+             con lo stile "font-bold".
+       Nota: i tool di cui esistono dei 'job' (forzatamente associati => "font-bold")
+             sono generati con l'attributo "data-have-jobs" e il relativo numero di job.
+    */
+    .tool-yes {
+        @apply a4-text-shade-300;
+    }
+
+    .tool-no {
+        @apply text-gray-600;
+    }
+
+    .tool-no[data-have-jobs] {
+        @apply text-red-500;
+    }
+
+    .tool-disabled {
+        @apply text-gray-400;
+    }
+
+    .tool-access-div {
+        @apply text-sm mt-[0.125rem] inline-block min-h-[1.5rem] whitespace-nowrap overflow-x-hidden text-ellipsis;
+    }
+
+    .tool-access-div.tool-read {
+        @apply text-gray-600;
+    }
+
+    .tool-access-div.tool-none {
+        @apply text-gray-400;
+    }
+
+    .tool-have-job {
+        @apply a4-text-shade-300 pr-1;
+    }
+
+    .tool-have-no-job {
+        @apply text-transparent pr-1;
+    }
+}
+
+/* Classe per i colori dei selettori per aprire le pagine di amministrazione. */
+@layer components {
+    /* Quattro casi:
+         • data-can-view="no"                   => text-amber-600 + cursor-pointer
+         • data-can-view="no" & .admin-selected => text-amber-400 + after:content-['●'] ('\25cf')
+         • not .admin-selected                  => inherited text color + cursor-pointer
+         • .admin-selected                      => a4-text-shade-200 + after:content-['●'] ('\25cf')
+    */
+    .admin-selector {
+        @apply [&.admin-selected]:a4-text-shade-200 data-[can-view=no]:text-amber-600 data-[can-view=no]:[&.admin-selected]:text-amber-400 after:[&.admin-selected]:content-['\25cf'] after:m-1.5 after:a4-text-shade-100 [&:not(.admin-selected)]:cursor-pointer hover:[&:not(.admin-selected)]:underline decoration-2 decoration-[--a4-shade-200];
+    }
+}
+
+/* Classi per i blocchi con sfondo e colore per segnalare un errore. */
+@layer components {
+    .phier-blk:not(.bg-red-100),
+    .hier-blk:not(.bg-red-100),
+    .org-level-data:not(.bg-red-100),
+    .org-level-aside:not(.bg-red-100),
+    #tag-langs:not(.bg-red-100),
+    #language-data:not(.bg-red-100),
+    #inspire-langs:not(.bg-red-100) {
+        @apply bg-amber-100;
+    }
+}
+
+/* Classi per gli <input type="range" />. */
+@layer components {
+    .tools-tags-check {
+        @apply me-[6px] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-secondary-500 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-transparent before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ms-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ms-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent rtl:float-right dark:border-neutral-400 dark:checked:border-primary dark:checked:bg-primary;
+    }
+
+    .tools-tags-check::before,
+    .tools-tags-check:focus:checked::before {
+        --tw-shadow: 0 0 0 13px #3b71ca;
+        --tw-shadow-colored: 0 0 0 13px var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
+    }
+
+    input[type="range"] {  /* Settings globali. */
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        height: 0.25rem;
+        background: #3b71ca;  /* Il colore di background funge da colore per il "track" normale (per -webkit). */
+        border: none;
+        border-radius: 0.125rem;
+        cursor: pointer;
+    }
+
+    input[type="range"]:disabled {  /* Settings globali. */
+        background: #b8b8b8;  /* Il colore di background funge da colore per il "track" disabilitato (per -webkit). */
+    }
+
+    .tag-weight-range {
+        @apply w-40;  /* width: 10rem; (160px). */
+    }
+
+    input[type="range"]::-webkit-slider-thumb {  /* Lasciare questa ruleset separata dalla prossima ruleset. */
+        height: 17px;
+        width: 17px;
+        background: #3b71ca;  /* Colore del "thumb" in stato normale (-webkit). */
+        border-radius: 0.375rem;
+        border: 0.2rem solid #ffffff;
+        box-shadow: 0 1px 4px 0 rgb(0, 0, 0.5);
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        cursor: pointer;
+    }
+
+    input[type="range"]::-moz-range-thumb {
+        height: 11px;
+        width: 11px;
+        background: #3b71ca;  /* Colore del "thumb" in stato normale (-moz). */
+        border-radius: 0.375rem;
+        border: 0.2rem solid #ffffff;
+        box-shadow: 0 1px 4px 0 rgb(0, 0, 0.5);
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        cursor: pointer;
+    }
+
+    input[type="range"]:disabled::-webkit-slider-thumb,
+    input[type="range"]:disabled:focus::-webkit-slider-thumb,
+    input[type="range"]:disabled:active::-webkit-slider-thumb {
+        background: #a3a3a3;  /* Colore del "thumb" in stato disabilitato (-webkit). */
+    }
+
+    input[type="range"]:disabled::-moz-range-thumb {
+        background: #a3a3a3;  /* Colore del "thumb" in stato disabilitato (-moz). */
+    }
+
+    input[type="range"]:enabled:hover::-webkit-slider-thumb {
+        background: #285192;
+    }
+
+    input[type="range"]:enabled:hover::-moz-range-thumb {
+        background: #285192;
+    }
+
+    input[type="range"]::-moz-range-progress {
+        background: #3061af;  /* Sovrascrive il colore di background dei settings globali (specifico per -moz). */
+        border-radius: 0.125rem;
+    }
+
+    input[type="range"]:disabled::-moz-range-progress {
+        background: #b8b8b8;  /* Sovrascrive il colore di background dei settings globali (disabled, specifico per -moz). */
+    }
+
+    input[type="range"]::-moz-range-track {
+        background: #a0a0a0;  /* Sovrascrive il colore di background dei settings globali (specifico per -moz). */
+        height: 0.25rem;
+        border-radius: 0.125rem;
+    }
+
+    input[type="range"]:disabled::-moz-range-track {
+        background: #b8b8b8;  /* Sovrascrive il colore di background dei settings globali (disabled, specifico per -moz). */
+    }
+
+    input[type="range"]::-ms-fill-lower {
+        background: #3061af;
+    }
+
+    input[type="range"]:focus {
+        outline: none;
+    }
+}
+
+/* Classi per il blocco dell'organigramma (Sections block). */
+@layer components {
+    .org-level-blk {
+        @apply grid grid-cols-[2rem_1fr] mt-4 border-2 a4-bord-shade-100 rounded;
+    }
+
+    .org-level-data {
+        @apply col-span-2 px-4 py-2 border-b-0 a4-bord-shade-100 rounded-t-[0.3rem] transition-colors duration-500;
+    }
+
+    .org-level-title,
+    .org-section-title {
+        @apply grid grid-cols-[auto_1fr_auto];
+    }
+
+    .org-section-parent-title {
+        @apply grid grid-cols-[auto_1fr_auto_auto];
+    }
+
+    .level-exp-arrow,
+    .section-exp-arrow {
+        @apply mr-1 w-4 h-4 shrink-0 fill-[#336dec] self-center cursor-pointer transition-transform duration-500 ease-in-out;
+    }
+
+    .level-label {
+        @apply self-center;
+    }
+
+    .section-label {
+        @apply self-center cursor-default;
+    }
+
+    .level-trash,
+    .section-trash {
+        @apply ml-3 self-center cursor-pointer;
+    }
+
+    .org-level-langs,
+    .org-section-langs {
+        @apply grid grid-cols-2 gap-x-4 gap-y-2;
+    }
+
+    .org-level-aside {
+        @apply flex justify-center items-center border-r-2 a4-bord-shade-100 transition-colors duration-500;
+    }
+
+    .org-sections-container {
+        @apply border-t-2 a4-bord-shade-100 transition-colors duration-500;
+    }
+
+    .org-sections-info {
+        @apply grid grid-cols-[1fr_auto] px-4 py-3;
+    }
+
+    .org-section-data {
+        @apply col-span-2 px-4 py-2 border-t border-neutral-300 transition-colors duration-500;
+    }
+}
+
+/* Classi per la table dei logs. */
+@layer components {
+    #log-table td {
+        @apply p-2;
+    }
+
+    #log-table tbody tr:nth-child(2n) {
+        @apply bg-[#f0f0f0];
+    }
+
+    #log-table tbody tr {
+        @apply transition duration-500 ease-in-out;
+    }
+    #log-table tbody tr:hover {
+        @apply bg-neutral-200;
+    }
+}
+
+/* Classi per il popup "#preview-popup". */
+@layer components {
+    #preview-popup {
+        @apply absolute hidden bg-neutral-50 border border-solid rounded border-neutral-300 box-border overflow-auto;
+    }
+
+    .preview-formatting {
+        @apply text-neutral-600 mx-3 my-1;
+    }
+
+    .preview-formatting ul {
+        @apply ml-6 mb-4;
+    }
+
+    .preview-formatting ol {
+        @apply ml-7 mb-4;
+    }
+
+    .preview-formatting p {
+        @apply mb-4;
+    }
+
+    .preview-formatting blockquote {
+        @apply px-4 mb-4 border-l-4 border-neutral-300 bg-[#f0f0f0];
+    }
+
+    .preview-formatting blockquote > :last-child {
+        @apply mb-0;
+    }
+
+    .preview-formatting ul ul,
+    .preview-formatting ul ol,
+    .preview-formatting ol ul,
+    .preview-formatting ol ol {
+        @apply mb-0;
+    }
+
+    .preview-formatting a {
+        @apply a4-text-shade-300 no-underline;
+    }
+
+    .preview-formatting a:hover {
+        @apply underline;
+    }
+}
+
+
+/* Forza l'esistenza della classe drag-over. */
+.drag-over {
+    background-color: #76c8e2;
+}
+
+/* Forza l'esistenza della classe bt-disabled. */
+.bt-disabled svg,
+.bt-disabled:hover svg {
+   fill: rgb(212, 212, 212);  /* text-neutral-300. */
+}
+
+
+body, html {
+    min-height: 100vh;
+}
